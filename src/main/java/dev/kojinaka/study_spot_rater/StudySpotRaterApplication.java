@@ -1,4 +1,4 @@
-package dev.kojinaka.study_spot_rater.service;
+package dev.kojinaka.study_spot_rater;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
