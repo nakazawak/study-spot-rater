@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,11 +28,12 @@ public class StudySpot {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "amenities")
+    private String amenities;
+
     @Column(name = "type")
     private String type;
 
-    @Column(name = "amenities")
-    private String amenities;
 
     @Column(name = "average_rating")
     private double averageRating;
