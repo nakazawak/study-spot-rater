@@ -12,4 +12,6 @@ public interface StudySpotService {
     List<StudySpotDto> getAllStudySpots();
 
     StudySpotDto updateStudySpot(Long studySpotId, StudySpotDto updatedStudySpot);
+
+    void deleteStudySpot(Long studySpotId);
 }

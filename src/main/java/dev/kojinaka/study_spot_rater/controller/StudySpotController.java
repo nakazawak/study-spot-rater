@@ -43,4 +43,11 @@ public class StudySpotController {
         StudySpotDto studySpotDto = studySpotService.updateStudySpot(studySpotId, updatedStudySpot);
         return ResponseEntity.ok(studySpotDto);
     }
+
+    //Build DELETE StudySpot REST API
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteStudySpot(@PathVariable("id") Long studySpotId) {
+        studySpotService.deleteStudySpot(studySpotId);
+        return ResponseEntity.ok("Study Spot deleted successfully!");
+    }
 }

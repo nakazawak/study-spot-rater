@@ -59,4 +59,13 @@ public class StudySpotServiceImpl implements StudySpotService {
 
         return StudySpotMapper.mapToStudySpotDto(updatedStudySpotObj);
     }
+
+    @Override
+    public void deleteStudySpot(Long studySpotId) {
+        StudySpot studySpot = studyspotRepository.findById(studySpotId).orElseThrow(
+                () -> new ResourceNotFoundException("Study Spot does not exist with the given id: " + studySpotId)
+        );
+
+        studyspotRepository.deleteById(studySpotId);
+    }
 }
