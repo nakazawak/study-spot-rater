@@ -36,4 +36,11 @@ public class StudySpotController {
         List<StudySpotDto> studySpotDtoList = studySpotService.getAllStudySpots();
         return ResponseEntity.ok(studySpotDtoList);
     }
+
+    //Build UPDATE StudySpot REST API
+    @PutMapping("{id}")
+    public ResponseEntity<StudySpotDto> updateStudySpot(@PathVariable("id") Long studySpotId, @RequestBody StudySpotDto updatedStudySpot) {
+        StudySpotDto studySpotDto = studySpotService.updateStudySpot(studySpotId, updatedStudySpot);
+        return ResponseEntity.ok(studySpotDto);
+    }
 }

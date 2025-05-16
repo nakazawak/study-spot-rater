@@ -44,4 +44,19 @@ public class StudySpotServiceImpl implements StudySpotService {
         return studySpotList.stream().map((studyspot) -> StudySpotMapper.mapToStudySpotDto(studyspot))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public StudySpotDto updateStudySpot(Long studySpotId, StudySpotDto updatedStudySpot) {
+        StudySpot studySpot = studyspotRepository.findById(studySpotId).orElseThrow(
+                () -> new ResourceNotFoundException("StudySpot does not exist with the given id: " + studySpotId));
+
+        studySpot.setName(updatedStudySpot.getName());
+        studySpot.setType(updatedStudySpot.getType());
+        studySpot.setAddress(updatedStudySpot.getAddress());
+        studySpot.setAmenities(updatedStudySpot.getAmenities());
+        studySpot.setAverageRating(updatedStudySpot.getAverage_rating());
+        StudySpot updatedStudySpotObj = studyspotRepository.save(studySpot);
+
+        return StudySpotMapper.mapToStudySpotDto(updatedStudySpotObj);
+    }
 }

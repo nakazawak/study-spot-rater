@@ -10,4 +10,6 @@ public interface StudySpotService {
     StudySpotDto getStudySpotById(Long studySpotId);
 
     List<StudySpotDto> getAllStudySpots();
+
+    StudySpotDto updateStudySpot(Long studySpotId, StudySpotDto updatedStudySpot);
 }
