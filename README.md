@@ -1,6 +1,6 @@
-# Study Spot Rater
+# Find My Study
 
-**Study Spot Rater** is a Spring Boot application that provides a RESTful API for managing and rating campus study spots. Users can add locations, submit reviews, and view average ratings. This project is designed to help students discover great places to study.
+**Find My Study** is a Spring Boot application that provides a RESTful API for managing and rating campus study spots. Users can add locations, submit reviews, and view average ratings. This project is designed to help students discover great places to study.
 
 ---
 
